@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- First -->
+    <h2>JavaScript disimpan dibody</h2>
+    <p id="demo"></p>
+    <script>
+      document.getElementById('demo').innerHTML = 'Selamat Datang, Hallo World! Saya Belajar Javascript';
+    </script>
+    <!-- Second -->
+    <h2>Apa yang bisa dilakukan Javascript?</h2>
+    <p id="demo">JavaScript bisa mengganti style dari HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Disini!</button>
+    <script>
+      function myFunction() {
+        document.getElementById('demo3').innerHTML = 'Yeee, Berhasi;, ini adalah hasil dari memasukan javascript pada head HTML awas jangan salah ya? iya pak.. hehe';
+      }
+    </script>
+    <!-- Third -->
+    <h2>Paragrafnya harus berubah siap, Sok di klik dulu button nya</h2>
+    <p id="demo3">Nyobain javascript yang disimpadn pada HEAD</p>
+    <button type="button" onclick="myFunction()">Coba Klik</button>
+    <!-- Geolocation -->
+    <h2>JavaScript Menggunakan geolocation</h2>
+    <p id="demo4">Klik Button untuk menampilkan koordinat</p>
+    <button type="button" onclick="getLocation()" >Klik Disini</button>
+    <script>
+      const x = document.getElementById('demo4');
+      function getLocation() {
+        try {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+          x.innerHTML = err;
+        }
+      }
+      function showPosition(position) {
+        x.innerHTML = "Latitude:" + position.coords.latitude + "<br>Longitude:" + position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>
