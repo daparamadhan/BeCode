@@ -28,7 +28,7 @@
     <!-- Geolocation -->
     <h2>JavaScript Menggunakan geolocation</h2>
     <p id="demo4">Klik Button untuk menampilkan koordinat</p>
-    <button type="button" onclick="getLocation()" >Klik Disini</button>
+    <button type="button" onclick="getLocation()">Klik Disini</button>
     <script>
       const x = document.getElementById('demo4');
       function getLocation() {
@@ -39,7 +39,7 @@
         }
       }
       function showPosition(position) {
-        x.innerHTML = "Latitude:" + position.coords.latitude + "<br>Longitude:" + position.coords.longitude;
+        x.innerHTML = 'Latitude:' + position.coords.latitude + '<br>Longitude:' + position.coords.longitude;
       }
     </script>
   </body>
